@@ -1,31 +1,18 @@
 import React, { Component } from "react";
 
 class App extends Component {
+  state = { displayBio: false };
+
   constructor() {
     super();
     this.state = { displayBio: false };
-
     console.log("Component this", this);
-
-    // this.readMore = this.readMore.bind(this);
-    // this.readLess = this.readLess.bind(this);
-
     this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
   }
 
-  // readMore() {
-  //   console.log("readMore this", this);
-  //   this.setState({ displayBio: true });
-  //   // this.state.displayBio = true;
-  // }
-
-  // readLess() {
-  //   this.setState({ displayBio: false });
-  // }
-
-  toggleDisplayBio() {
+  toggleDisplayBio = () => {
     this.setState({ displayBio: !this.state.displayBio });
-  }
+  };
 
   render() {
     const bio = this.state.displayBio ? (
