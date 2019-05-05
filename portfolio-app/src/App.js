@@ -1,14 +1,5 @@
 import React, { Component } from "react";
 
-// class RegularClass {}
-// class ComponentClass extends Component {}
-
-// const regularClassInstance = new RegularClass();
-// const componentClassInstance = new ComponentClass();
-
-// console.log("regularClassInstance", regularClassInstance);
-// console.log("componentClassInstance", componentClassInstance);
-
 class App extends Component {
   constructor() {
     super();
@@ -16,19 +7,24 @@ class App extends Component {
 
     console.log("Component this", this);
 
-    //   this.readMore = () => {
-    //     console.log("readMore this", this);
-    //   };
-    // }
+    // this.readMore = this.readMore.bind(this);
+    // this.readLess = this.readLess.bind(this);
 
-    this.readMore = this.readMore.bind(this);
+    this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
   }
 
-  readMore() {
-    console.log("readMore this", this);
+  // readMore() {
+  //   console.log("readMore this", this);
+  //   this.setState({ displayBio: true });
+  //   // this.state.displayBio = true;
+  // }
 
-    // this.setState({ displayBio: true });
-    // this.state.displayBio = true;
+  // readLess() {
+  //   this.setState({ displayBio: false });
+  // }
+
+  toggleDisplayBio() {
+    this.setState({ displayBio: !this.state.displayBio });
   }
 
   render() {
@@ -39,10 +35,11 @@ class App extends Component {
           My favorite language is JavaScript, and I think React.js is awesome.
         </p>
         <p>Besides coding, I also love ramen and music.</p>
+        <button onClick={this.toggleDisplayBio}>Read Less</button>
       </div>
     ) : (
       <div>
-        <button onClick={this.readMore}>Read more</button>
+        <button onClick={this.toggleDisplayBio}>Read more</button>
       </div>
     );
 
