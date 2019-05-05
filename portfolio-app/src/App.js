@@ -12,7 +12,23 @@ import React, { Component } from "react";
 class App extends Component {
   constructor() {
     super();
-    this.state = { displayBio: true };
+    this.state = { displayBio: false };
+
+    console.log("Component this", this);
+
+    //   this.readMore = () => {
+    //     console.log("readMore this", this);
+    //   };
+    // }
+
+    this.readMore = this.readMore.bind(this);
+  }
+
+  readMore() {
+    console.log("readMore this", this);
+
+    // this.setState({ displayBio: true });
+    // this.state.displayBio = true;
   }
 
   render() {
@@ -24,7 +40,11 @@ class App extends Component {
         </p>
         <p>Besides coding, I also love ramen and music.</p>
       </div>
-    ) : null;
+    ) : (
+      <div>
+        <button onClick={this.readMore}>Read more</button>
+      </div>
+    );
 
     // if (!this.state.displayBio) {
     //   bio = null;
