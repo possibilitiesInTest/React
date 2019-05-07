@@ -26080,13 +26080,13 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "animateTitles", function () {
-      setInterval(function () {
+      _this.titleInterval = setInterval(function () {
         var titleIndex = (_this.state.titleIndex + 1) % TITLES.length;
 
         _this.setState({
           titleIndex: titleIndex
         });
-      }, 3000);
+      }, 3000); // console.log("this.titleInterval", this.titleInterval);
     });
 
     return _this;
@@ -26095,8 +26095,14 @@ function (_Component) {
   _createClass(Title, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log("Title component has mounted");
+      // console.log("Title component has mounted");
       this.animateTitles();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      // console.log("Title component will unmount!");
+      clearInterval(this.titleInterval);
     }
   }, {
     key: "render",
@@ -26191,7 +26197,7 @@ function (_Component) {
         src: _profile.default,
         alt: "profile",
         className: "profile"
-      }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement("p", null, "My name is David."), _react.default.createElement(_Title.default, null), _react.default.createElement("p", null, "I'm always looking forward to working on meaningful projects."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I live in San Francisco, and code every day."), _react.default.createElement("p", null, "My favorite language is JavaScript, and I think React.js is awesome."), _react.default.createElement("p", null, "Besides coding, I also love music and ramen!"), _react.default.createElement("button", {
+      }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement("p", null, "My name is David."), this.state.displayBio ? _react.default.createElement(_Title.default, null) : null, _react.default.createElement("p", null, "I'm always looking forward to working on meaningful projects."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I live in San Francisco, and code every day."), _react.default.createElement("p", null, "My favorite language is JavaScript, and I think React.js is awesome."), _react.default.createElement("p", null, "Besides coding, I also love music and ramen!"), _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
       }, "Show less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
