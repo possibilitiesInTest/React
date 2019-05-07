@@ -26079,10 +26079,26 @@ function (_Component) {
       titleIndex: 0
     });
 
+    _defineProperty(_assertThisInitialized(_this), "animateTitles", function () {
+      setInterval(function () {
+        var titleIndex = (_this.state.titleIndex + 1) % TITLES.length;
+
+        _this.setState({
+          titleIndex: titleIndex
+        });
+      }, 3000);
+    });
+
     return _this;
   }
 
   _createClass(Title, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("Title component has mounted");
+      this.animateTitles();
+    }
+  }, {
     key: "render",
     value: function render() {
       var title = TITLES[this.state.titleIndex];
