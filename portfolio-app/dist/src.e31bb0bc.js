@@ -26076,7 +26076,8 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Title)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
-      titleIndex: 0
+      titleIndex: 0,
+      fadeIn: true
     });
 
     _defineProperty(_assertThisInitialized(_this), "animateTitles", function () {
@@ -26084,9 +26085,16 @@ function (_Component) {
         var titleIndex = (_this.state.titleIndex + 1) % TITLES.length;
 
         _this.setState({
-          titleIndex: titleIndex
+          titleIndex: titleIndex,
+          fadeIn: true
         });
-      }, 3000); // console.log("this.titleInterval", this.titleInterval);
+
+        _this.timeout = setTimeout(function () {
+          return _this.setState({
+            fadeIn: false
+          });
+        }, 2000);
+      }, 4000); // console.log("this.titleInterval", this.titleInterval);
     });
 
     return _this;
@@ -26095,7 +26103,14 @@ function (_Component) {
   _createClass(Title, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       // console.log("Title component has mounted");
+      this.timeeout = setTimeout(function () {
+        return _this2.setState({
+          fadeIn: false
+        });
+      }, 2000);
       this.animateTitles();
     }
   }, {
@@ -26107,8 +26122,13 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this$state = this.state,
+          fadeIn = _this$state.fadeIn,
+          titleIndex = _this$state.titleIndex;
       var title = TITLES[this.state.titleIndex];
-      return _react.default.createElement("p", null, " I am ", title);
+      return _react.default.createElement("p", {
+        className: fadeIn ? "title-fade-in" : "title-fade-out"
+      }, "I am ", title);
     }
   }]);
 
