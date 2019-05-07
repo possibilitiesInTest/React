@@ -26197,7 +26197,7 @@ function (_Component) {
         src: _profile.default,
         alt: "profile",
         className: "profile"
-      }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement("p", null, "My name is David."), this.state.displayBio ? _react.default.createElement(_Title.default, null) : null, _react.default.createElement("p", null, "I'm always looking forward to working on meaningful projects."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I live in San Francisco, and code every day."), _react.default.createElement("p", null, "My favorite language is JavaScript, and I think React.js is awesome."), _react.default.createElement("p", null, "Besides coding, I also love music and ramen!"), _react.default.createElement("button", {
+      }), _react.default.createElement("h1", null, "Hello!"), _react.default.createElement("p", null, "My name is David."), _react.default.createElement(_Title.default, null), _react.default.createElement("p", null, "I'm always looking forward to working on meaningful projects."), this.state.displayBio ? _react.default.createElement("div", null, _react.default.createElement("p", null, "I live in San Francisco, and code every day."), _react.default.createElement("p", null, "My favorite language is JavaScript, and I think React.js is awesome."), _react.default.createElement("p", null, "Besides coding, I also love music and ramen!"), _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
       }, "Show less")) : _react.default.createElement("div", null, _react.default.createElement("button", {
         onClick: this.toggleDisplayBio
