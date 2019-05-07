@@ -7,7 +7,7 @@ const PROJECTS = [
     id: 1,
     title: "Example React Application",
     description:
-      "A react App that i built, involving JS and core web dev concepts!",
+      "A react App that I built, involving JS and core web dev concepts!",
     link: "https://github.com/15dkatz/example",
     image: project1
   },
@@ -23,7 +23,7 @@ const PROJECTS = [
     id: 3,
     title: "Operating Systems Final Project",
     description:
-      "My unique final project fro my university Operating Systems course",
+      "My unique final project from my university Operating Systems course",
     link: "https://github.com/15dkatz/example",
     image: project3
   }
