@@ -26118,6 +26118,7 @@ function (_Component) {
     value: function componentWillUnmount() {
       // console.log("Title component will unmount!");
       clearInterval(this.titleInterval);
+      clearTimeout(this.timeout);
     }
   }, {
     key: "render",
