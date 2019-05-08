@@ -26111,16 +26111,23 @@ function (_Component) {
   _createClass(jokes, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       fetch("https://official-joke-api.appspot.com/random_joke").then(function (response) {
         return response.json();
       }).then(function (json) {
-        return console.log("json", json);
+        return _this2.setState({
+          joke: json
+        });
       }); // console.log("response", response)
     }
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null);
+      var _this$state$joke = this.state.joke,
+          setup = _this$state$joke.setup,
+          punchline = _this$state$joke.punchline;
+      return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Highlighted Joke"), _react.default.createElement("p", null, setup, " ", _react.default.createElement("em", null, " ", punchline, " "), " "));
     }
   }]);
 
