@@ -4,9 +4,10 @@ class jokes extends Component {
   state = { joke: {} };
 
   componentDidMount() {
-    fetch("https://official-joke-api.appspot.com/random_joke").then(response =>
-      console.log("response", response)
-    );
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then(response => response.json())
+      .then(json => console.log("json", json));
+    // console.log("response", response)
   }
 
   render() {

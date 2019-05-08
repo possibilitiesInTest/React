@@ -26112,8 +26112,10 @@ function (_Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       fetch("https://official-joke-api.appspot.com/random_joke").then(function (response) {
-        return console.log("response", response);
-      });
+        return response.json();
+      }).then(function (json) {
+        return console.log("json", json);
+      }); // console.log("response", response)
     }
   }, {
     key: "render",
