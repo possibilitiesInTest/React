@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from './Header';
 
 const Joke = ({ joke: { setup, punchline } }) => (
   // const { setup, punchline } = joke;
@@ -30,7 +29,6 @@ class jokes extends Component {
 
   render = () => (
     <div>
-      <Header />
       <h2>Highlighted Joke</h2>
       <Joke joke={this.state.joke} />
 
