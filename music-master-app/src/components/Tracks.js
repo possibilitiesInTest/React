@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 
 class Tracks extends Component {
+    state = { playing: false, audio: null };
 
     playAudio = previewUrl => () => {
         const audio = new Audio(previewUrl);
 
-
+        if (!this.state.playing) {
             audio.play();
-
-    }
+            this.setState({playing: true, audio, playingPreviewUrl: previewUrl});
+        } else {
+            this.state.audio.pause();
+               this.setState({playing: false});
+            }
+        }
 
     render() {
         const { tracks } = this.props;
