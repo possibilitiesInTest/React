@@ -3,7 +3,6 @@ import Search from './Search';
 import Artist from './Artist';
 import Tracks from './Tracks';
 
-
 const API_ADDRESS = 'https://spotify-api-wrapper.appspot.com';
 
 
@@ -40,7 +39,7 @@ class App extends Component {
         return (
             <div>
                 <h2>Music Master</h2>
-                <Search searchArtist={this.searchArtist}/>
+                <Search searchArtist={this.searchArtist} />
                 <Artist artist={this.state.artist}/>
                 <Tracks tracks={this.state.tracks} />
             </div>

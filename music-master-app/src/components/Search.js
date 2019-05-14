@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 
-class Serarch extends Component {
-    state ={ artistQuery: '' }
+class Search extends Component {
+    state = {artistQuery: ''}
 
     updateArtistQuery = (event) => {
         // console.log('event.target.value', event.target.value);
-        this.setState({ artistQuery: event.target.value })
+        this.setState({artistQuery: event.target.value})
     }
 
-    handleKeyPress =event => {
-        if(event.key === 'Enter'){
+    handleKeyPress = event => {
+        if (event.key === 'Enter') {
             this.searchArtist();
         }
     }
 
     searchArtist() {
-        this.props.searchArtist(this.state.artistQuery);
+        this.props.searchArtist(this.state.artistQuery)
     }
 
     render() {
@@ -26,7 +26,7 @@ class Serarch extends Component {
                     onKeyPress={this.handleKeyPress}
                     placeholder='Search for an Artist'
                 />
-                <button onClick={ this.searchartist }>Search</button>
+                <button onClick={ this.searchArtist }>Search</button>
             </div>
         )
     }
