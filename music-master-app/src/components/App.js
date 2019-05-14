@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Search from './Search';
 import Artist from './Artist';
 import Tracks from './Tracks';
 
@@ -7,18 +8,8 @@ const API_ADDRESS = 'https://spotify-api-wrapper.appspot.com';
 
 
 class App extends Component {
-    state = { artistQuery: '', artist: null, tracks: [] };
+    state = { artist: null, tracks: [] };
 
-    updateArtistQuery = (event) => {
-        // console.log('event.target.value', event.target.value);
-        this.setState({ artistQuery: event.target.value })
-    }
-
-    handleKeyPress =event => {
-        if(event.key === 'Enter'){
-            this.searchArtist();
-        }
-    }
 
     searchArtist = () => {
         // console.log('this.state', this.state);
@@ -49,11 +40,7 @@ class App extends Component {
         return (
             <div>
                 <h2>Music Master</h2>
-                <input onChange={this.updateArtistQuery}
-                       onKeyPress={this.handleKeyPress}
-                       placeholder='Search for an Artist'
-                />
-                <button onClick={ this.searchartist }>Search</button>
+                <Search />
                 <Artist artist={this.state.artist}/>
                 <Tracks tracks={this.state.tracks} />
             </div>
