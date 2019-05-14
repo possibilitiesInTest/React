@@ -11,10 +11,10 @@ class App extends Component {
     state = { artist: null, tracks: [] };
 
 
-    searchArtist = () => {
+    searchArtist = artistQuery => {
         // console.log('this.state', this.state);
 
-        fetch(`${API_ADDRESS}/artist/${this.state.artistQuery}`)
+        fetch(`${API_ADDRESS}/artist/${artistQuery}`)
             .then(response => response.json())
             .then(json => {
                 // console.log('json', json)
@@ -40,7 +40,7 @@ class App extends Component {
         return (
             <div>
                 <h2>Music Master</h2>
-                <Search />
+                <Search searchArtist={this.searchArtist}/>
                 <Artist artist={this.state.artist}/>
                 <Tracks tracks={this.state.tracks} />
             </div>

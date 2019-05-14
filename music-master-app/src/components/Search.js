@@ -14,7 +14,9 @@ class Serarch extends Component {
         }
     }
 
-
+    searchArtist() {
+        this.props.searchArtist(this.state.artistQuery);
+    }
 
     render() {
         return (
