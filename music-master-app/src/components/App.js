@@ -9,6 +9,9 @@ const API_ADDRESS = 'https://spotify-api-wrapper.appspot.com';
 class App extends Component {
     state = { artist: null, tracks: [] };
 
+    componentDidMount() {
+        this.searchArtist('pentatonix');
+    }
 
     searchArtist = artistQuery => {
         // console.log('this.state', this.state);

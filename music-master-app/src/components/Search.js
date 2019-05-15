@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
-    state = {artistQuery: ''}
+    state = {artistQuery: ''};
 
     updateArtistQuery = (event) => {
         // console.log('event.target.value', event.target.value);
         this.setState({artistQuery: event.target.value})
-    }
+    };
 
     handleKeyPress = event => {
         if (event.key === 'Enter') {
             this.searchArtist();
         }
-    }
+    };
 
     searchArtist() {
         this.props.searchArtist(this.state.artistQuery)
