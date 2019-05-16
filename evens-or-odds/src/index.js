@@ -4,12 +4,19 @@ import { createStore } from "redux";
 import App from "./components/App";
 import "./index.css";
 
+const DEFAULT_SETTINGS = {
+  gameStarted: false,
+  instructionsExpanded: false
+}
+
+
 const rootReducer = () => {
-  return { foo: "bar" };
+  return DEFAULT_SETTINGS;
 };
 
 const store = createStore(rootReducer);
 
+console.log('store.getState()', store.getState());
 console.log("store", store);
 
 ReactDom.render(<App />, document.getElementById("root"));
