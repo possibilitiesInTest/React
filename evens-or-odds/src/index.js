@@ -15,14 +15,20 @@ const DEFAULT_SETTINGS = {
 const rootReducer = (state = DEFAULT_SETTINGS, action) => {
   console.log('state', state, 'action', action);
 
-  if(action.type === SET_GAME_STARTED) {
-    return {
-      gameStarted: action.gameStarted,
-      instructionsExpanded: false
-    };
+  switch (action.type) {
+    case SET_GAME_STARTED:
+      return { ...state, gameStarted: action.gameStarted };
+      //   gameStarted: action.gameStarted,
+      //   instructionsExpanded: state.instructionsExpanded
+      // };
+    case SET_INSTRUCTIONS_EXPANDED:
+      return { ...state, instructionsExpanded: action.instructionsExpanded };
+        // gameStarted: state.gameStarted,
+        // instructionsExpanded: action.instructionsExpanded
+      // };
+    default:
+      return state;
   }
-
-  return state;
 };
 
 // create store with reducer
@@ -55,8 +61,8 @@ const cancelInstructions =() => {
 // store.dispatch(action1);
 
 store.dispatch(startGame());
-store.dispatch(cancelGame());
 store.dispatch(expandInstructions());
 store.dispatch(cancelInstructions());
+store.dispatch(cancelGame());
 
 ReactDom.render(<App />, document.getElementById("root"));
