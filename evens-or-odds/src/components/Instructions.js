@@ -28,17 +28,7 @@ const Instructions = props => {
     )
 }
 
-const mapStateToProps = state => {
-    return { instructionsExpanded: state.instructionsExpanded};
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        expandInstructions: () => dispatch(expandInstructions()),
-        collapseInstructions: () => dispatch(collapseInstructions())
-    }
-}
-
-const componentConnector = connect(mapStateToProps, mapDispatchToProps);
-
-export default componentConnector(Instructions);
+export default connect(
+    state => ({ instructionsExpanded: state.instructionsExpanded}),
+    {expandInstructions, collapseInstructions }
+)(Instructions);
