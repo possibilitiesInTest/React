@@ -8,7 +8,9 @@ class App extends Component {
     startGame = () => {
         this.props.startGame();
 
-        fetch('https://deckofcardsapi.com/api/deck/new/shuffle')
+        fetch('https://deck-of-cards-api-wrapper.appspot.com/deck/new/shuffle')
+            //  CORS error aslo resolved with trailing slash
+            // 'https://deckofcardsapi.com/api/deck/new/shuffle/'
             .then(response => response.json())
             .then(json => {})
     }
