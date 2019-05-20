@@ -54,18 +54,14 @@ class App extends Component {
 const mapStateToProps = state => {
     console.log('state', state);
 
-    const { gameStarted, fetchState, message} = state;
+    const {
+        settings: { gameStarted },
+        deck: { fetchState, message}
+    } = state;
+
     return { gameStarted, fetchState, message };
 }
 
-// // // allows attachment of action creator methods to props { }
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         startGame: () => dispatch(startGame()),
-//         cancelGame: () => dispatch(cancelGame()),
-//         fetchNewDeck: () => (fetchNewDeck(dispatch))
-//     };
-// }
 
 // react-redux will call function to customize connector result
 const componentConnector = connect(
