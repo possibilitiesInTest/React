@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { startGame, cancelGame } from '../actions/settings';
-import { fetchDeckResult } from '../actions/deck';
+import { fetchNewDeck } from '../actions/deck';
 import Instructions from './Instructions';
 
 class App extends Component {
     startGame = () => {
         this.props.startGame();
+        this.props.fetchNewDeck();
 
-        fetch('https://deck-of-cards-api-wrapper.appspot.com/deck/new/shuffle')
-            //  CORS error aslo resolved with trailing slash
-            // 'https://deckofcardsapi.com/api/deck/new/shuffle/'
-            .then(response => response.json())
-            .then(json => {})
     }
 
     render() {
@@ -56,7 +52,7 @@ const mapDispatchToProps = dispatch => {
     return {
         startGame: () => dispatch(startGame()),
         cancelGame: () => dispatch(cancelGame()),
-        fetchDeckResult: deckJson => dispatch(fetchDeckResult(deckJson))
+        fetchNewDeck: () => (fetchNewDeck(dispatch))
     };
 }
 
