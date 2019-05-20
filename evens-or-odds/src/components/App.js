@@ -2,17 +2,27 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { startGame, cancelGame } from '../actions/settings';
 import { fetchNewDeck } from '../actions/deck';
+import fetchStates from '../reducers/fetchState';
 import Instructions from './Instructions';
 
 class App extends Component {
     startGame = () => {
         this.props.startGame();
         this.props.fetchNewDeck();
-
     }
+
 
     render() {
         console.log('this', this);
+
+        if(this.props.fetchState === fetchStates.error) {
+            return (
+                <div>
+                    <p>Please try reloading the app. An error occurred.</p>
+                    <p>{this.props.message}</p>
+                </div>
+            )
+        }
 
         return (
             <div>
@@ -44,7 +54,8 @@ class App extends Component {
 const mapStateToProps = state => {
     console.log('state', state);
 
-    return { gameStarted: state.gameStarted };
+    const { gameStarted, fetchState, message} = state;
+    return { gameStarted, fetchState, message };
 }
 
 // // // allows attachment of action creator methods to props { }

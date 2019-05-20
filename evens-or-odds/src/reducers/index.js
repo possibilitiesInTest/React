@@ -3,6 +3,7 @@ import {
   SET_INSTRUCTIONS_EXPANDED,
     DECK
 } from '../actions/types';
+import fetchStates from './fetchState';
 
 const DEFAULT_SETTINGS = {
   gameStarted: false,
@@ -15,19 +16,13 @@ const rootReducer = (state = DEFAULT_SETTINGS, action) => {
   switch (action.type) {
     case SET_GAME_STARTED:
       return { ...state, gameStarted: action.gameStarted };
-    //   gameStarted: action.gameStarted,
-    //   instructionsExpanded: state.instructionsExpanded
-    // };
     case SET_INSTRUCTIONS_EXPANDED:
       return { ...state, instructionsExpanded: action.instructionsExpanded };
-    // gameStarted: state.gameStarted,
-    // instructionsExpanded: action.instructionsExpanded
-    // };
     case DECK.FETCH_SUCCESS:
       const {remaining, deck_id } = action;
-      return { ...state, remaining, deck_id };
+      return { ...state, remaining, deck_id, fetchState: fetchStates.success };
       case DECK.FETCH_ERROR:
-          return { ...state, message: action.message };
+          return { ...state, message: action.message, fetchState: fetchStates.error };
     default:
       return state;
   }
