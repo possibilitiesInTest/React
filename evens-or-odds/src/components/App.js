@@ -47,17 +47,20 @@ const mapStateToProps = state => {
     return { gameStarted: state.gameStarted };
 }
 
-// // allows attachment of action creator methods to props { }
-const mapDispatchToProps = dispatch => {
-    return {
-        startGame: () => dispatch(startGame()),
-        cancelGame: () => dispatch(cancelGame()),
-        fetchNewDeck: () => (fetchNewDeck(dispatch))
-    };
-}
+// // // allows attachment of action creator methods to props { }
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         startGame: () => dispatch(startGame()),
+//         cancelGame: () => dispatch(cancelGame()),
+//         fetchNewDeck: () => (fetchNewDeck(dispatch))
+//     };
+// }
 
 // react-redux will call function to customize connector result
-const componentConnector = connect(mapStateToProps, mapDispatchToProps);
+const componentConnector = connect(
+    mapStateToProps,
+    { startGame, cancelGame, fetchNewDeck }
+);
 
 // component now connected to redux store
 export default componentConnector(App);
