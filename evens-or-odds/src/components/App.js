@@ -5,6 +5,7 @@ import { fetchNewDeck } from '../actions/deck';
 import fetchStates from '../reducers/fetchState';
 import Instructions from './Instructions';
 import DrawCard from './DrawCard';
+import Card from './Card';
 
 class App extends Component {
     startGame = () => {
@@ -34,6 +35,8 @@ class App extends Component {
                             <h3>The game in on!</h3>
                             <br />
                             <DrawCard />
+                            <hr />
+                            <Card />
                             <hr />
                             <button onClick={this.props.cancelGame}>Cancel Game</button>
                         </div>
