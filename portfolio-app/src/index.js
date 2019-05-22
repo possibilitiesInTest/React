@@ -5,6 +5,7 @@ import createBrowserHistory from "history/createBrowserHistory";
 import App from "./components/App";
 import Jokes from "./components/Jokes";
 import MusicMaster from "./projects/music-master";
+import EvensOrOdds from './projects/evens-or-odds';
 import Header from "./components/Header";
 import "./index.css";
 
@@ -36,6 +37,14 @@ ReactDom.render(
           </Header>
         )}
       />
+        <Route
+            path="/evens-or-odds"
+            render={() => (
+                <Header>
+                    <EvensOrOdds />
+                </Header>
+            )}
+        />
     </Switch>
   </Router>,
   document.getElementById("root")
