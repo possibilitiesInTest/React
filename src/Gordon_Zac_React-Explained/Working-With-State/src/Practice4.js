@@ -4,6 +4,10 @@ import React from "react";
   1. Create a functional component called Header
   2. Return an <h2> with the value of text from props.text
 */
+const Header = props => {
+  return <h1>{props.text}</h1>
+}
+
 
 /*
   3. Create a functional component called Button
@@ -11,17 +15,31 @@ import React from "react";
       to props.onClick and the value of the Button text
       set to props.text      
 */
+const Button = props => {
+  return <button onClick={props.onClick}>{props.text}</button>
+}
 
 class Practice4 extends React.Component {
   /*
     5. Setup state with a count property set to 0
   */
-
+state = {
+  count: 0
+}
   /*
     6. Create an incremenent function that adds one to the value of count in state
     7. Create a decremenent function that subtracts one from the value of count in state
     8. Create a reset function that sets the value of count in state back to 0
   */
+  increment = () => {
+    this.setState({count: this.state.count + 1})
+  }
+  decrement = () => {
+    this.setState({count: this.state.count - 1})
+  }
+  reset = () => {
+    this.setState({count: 0})
+  }
 
   render() {
     return (
@@ -32,6 +50,11 @@ class Practice4 extends React.Component {
           11. Call Button with onClick set to increment and text "+"
           12. Call Button with onClick set to reset and text "Reset"
         */}
+        <Header text={this.state.count}/>
+        <Button onClick={this.increment} text="+"/>
+        <Button onClick={this.decrement} text="-"/>
+        <Button onClick={this.reset} text="Reset"/>
+
       </>
     );
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import SimpleStorage from "react-simple-storage";
 /*
   1. Make sure Create React App is stopped
   2. Run `npm install react-simple-storage` 
@@ -33,6 +34,7 @@ class Practice5 extends React.Component {
         {/*
           5. Call <SimpleStorage parent={this} />
         */}
+        <SimpleStorage parent={this} />
         <Header text={this.state.count} />
         <Button onClick={this.decrement} text="-" />
         <Button onClick={this.increment} text="+" />
