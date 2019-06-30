@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header"
 import Posts from "./components/Posts";
 import Post from "./components/Post";
+import NotFound from "./components/NotFound";
 import {
     BrowserRouter as Router,
     Switch,
@@ -49,9 +50,11 @@ class App extends Component {
                                    const post = this.state.posts.find(
                                        post => post.slug === props.match.params.postSlug
                                );
-                                   return <Post post={post}/>;
+                                   if (post) return <Post post={post}/>;
+                                   else return <NotFound />
                                }}
                         />
+                        <Route component={NotFound}/>
                     </Switch>
 
                 </div>
