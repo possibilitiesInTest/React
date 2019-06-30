@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import "./App.css";
 import Header from "./components/Header"
 import Posts from "./components/Posts";
+import Post from "./components/Post";
 import {
     BrowserRouter as Router,
     Switch,
@@ -20,7 +21,7 @@ class App extends Component {
             },
             {
                 id: 2,
-                slug: "hello-react",
+                slug: "hello-project",
                 title: "Hello Project",
                 content: "Tothe."
             },
@@ -43,7 +44,16 @@ class App extends Component {
                         <Route exact path="/"
                                render={() => <Posts posts={this.state.posts}/>}
                         />
+                        <Route path="/post/:postSlug"
+                               render={props => {
+                                   const post = this.state.posts.find(
+                                       post => post.slug === props.match.params.postSlug
+                               );
+                                   return <Post post={post}/>;
+                               }}
+                        />
                     </Switch>
+
                 </div>
             </Router>
         );
