@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Posts from "./components/Posts";
 import Post from "./components/Post";
 import NotFound from "./components/NotFound";
+import PostForm from "./components/PostForm";
 import {
     BrowserRouter as Router,
     Switch,
@@ -55,6 +56,7 @@ class App extends Component {
                                }}
                         />
                         <Route component={NotFound}/>
+                        <Route exact path="/new" component={PostForm} />
                     </Switch>
 
                 </div>
