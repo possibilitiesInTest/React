@@ -5,6 +5,7 @@ import Posts from "./components/Posts";
 import Post from "./components/Post";
 import NotFound from "./components/NotFound";
 import PostForm from "./components/PostForm";
+import Message from "./components/Message";
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,8 +15,8 @@ import {
 
 class App extends Component {
     state = {
-        posts: [
-        ]
+        posts: [],
+        message: null
     };
 
     addNewPost = post => {
@@ -27,8 +28,12 @@ class App extends Component {
                 .join("-")
         );
         this.setState({
-            posts: [...this.state.posts, post]
+            posts: [...this.state.posts, post],
+            message: "saved"
         });
+        setTimeout(() => {
+            this.setState({ message: null });
+        }, 1600);
     };
 
 
@@ -37,6 +42,7 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Header/>
+                    {this.state.message && <Message type={this.state.message} />}
                     <Switch>
                         <Route exact path="/"
                                render={() => <Posts posts={this.state.posts}/>}
