@@ -63,6 +63,17 @@ class App extends Component {
                                    <PostForm addNewPost={this.addNewPost}/>
                                )}
                         />
+                        <Route
+                            path="edit/:postSlug"
+                            render={props => { this.state.posts.find (
+                                post => post.slug === props.match.params.postSlug
+                            );
+                            if (post) {
+                                return <PostForm post={post} />;
+                            } else {
+                                return <redirect to="/" />;
+                            }
+                            }}
                         <Route component={NotFound}/>
                     </Switch>
 

@@ -14,6 +14,9 @@ const Posts = ({ posts }) => (
                 </li>
             ))}
         </ul>
+        <p>
+            <Link TO={`/EDIT/${post.slug}`}>Edit</Link>
+        </p>
     </article>
 )
 
