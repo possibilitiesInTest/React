@@ -14,6 +14,19 @@ class PostForm extends Component {
         saved: false
     };
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.post.id !== this.props.post.id) {
+            this.setState({
+                post: {
+                    id: this.props.post.id,
+                    slug: this.props.post.slug,
+                    title: this.props.post.title,
+                    content: this.props.post.content
+                }
+            });
+        }
+    }
+
     handlePostForm = e => {
         e.preventDefault();
         if(this.state.post.title) {
