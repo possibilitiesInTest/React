@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import React, {Component} from "react";
+import {Redirect} from "react-router-dom";
 import Quill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 
@@ -29,13 +29,13 @@ class PostForm extends Component {
 
     handlePostForm = e => {
         e.preventDefault();
-        if(this.state.post.title) {
-            if(this.props.updatePost) {
+        if (this.state.post.title) {
+            if (this.props.updatePost) {
                 this.props.updatePost(this.state.post);
             } else {
                 this.props.addNewPost(this.state.post);
             }
-            this.setState({ saved: true });
+            this.setState({saved: true});
         } else {
             alert("Title required.");
         }
@@ -43,13 +43,14 @@ class PostForm extends Component {
 
     render() {
         if (this.state.saved === true) {
-            return <Redirect to="/" />;
-        } return (
+            return <Redirect to="/"/>;
+        }
+        return (
             <form className="container" onSubmit={this.handlePostForm}>
-            <h1>Add a New Post</h1>
+                <h1>Add a New Post</h1>
                 <p>
-                    <label htmlFor = "form-title">Title:</label>
-                    <br />
+                    <label htmlFor="form-title">Title:</label>
+                    <br/>
                     <input id="form-title"
                            defaultValue={this.props.title}
                            value={this.state.post.title}
@@ -60,7 +61,7 @@ class PostForm extends Component {
                                }
                            })
                            }
-                           />
+                    />
                 </p>
                 <p>
                     <label htmlFor="form-content">Content:</label>
@@ -68,14 +69,14 @@ class PostForm extends Component {
                 <Quill
                     deafultValue={this.state.post.content}
                     onChange={(content, delta, source, editor) => {
-                    this.setState({
-                        post: {
-                            ...this.state.post,
-                            content: editor.getContents()
-                        }
+                        this.setState({
+                            post: {
+                                ...this.state.post,
+                                content: editor.getContents()
+                            }
                         });
-                }}
-                       />
+                    }}
+                />
                 <p>
                     <button type="submit">Save</button>
                 </p>

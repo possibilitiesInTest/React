@@ -6,10 +6,12 @@ import Post from "./components/Post";
 import NotFound from "./components/NotFound";
 import PostForm from "./components/PostForm";
 import Message from "./components/Message";
+import SimpleStorage from "react-simple-storage";
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    Redirect
 } from "react-router-dom";
 
 
@@ -20,12 +22,12 @@ class App extends Component {
     };
 
     getNewSlugFromTitle = title =>
-          encodeURIComponent(
+        encodeURIComponent(
             title
-            .toLowerCase()
-            .split(" ")
-            .join("-")
-          );
+                .toLowerCase()
+                .split(" ")
+                .join("-")
+        );
 
 
     addNewPost = post => {
@@ -36,7 +38,7 @@ class App extends Component {
             message: "saved"
         });
         setTimeout(() => {
-            this.setState({ message: null });
+            this.setState({message: null});
         }, 1600);
     };
 
@@ -51,32 +53,32 @@ class App extends Component {
         const newPosts = [...posts, post].sort((a, b) =>
             a.id - b.id);
         this.setState({
-        posts: newPosts,
-        message: "updated"
+            posts: newPosts,
+            message: "updated"
         });
         setTimeout(() => {
-            this.setState({ message: null });
+            this.setState({message: null});
         }, 1600);
     };
 
     deletePost = post => {
-        if(window.confirm("Delete this post?")) {
-            const posts = this.state.posts.filter(p => p.id != post.id);
-            this.setState({ posts, message: "deleted" });
+        if (window.confirm("Delete this post?")) {
+            const posts = this.state.posts.filter(p => p.id !== post.id);
+            this.setState({posts, message: "deleted"});
             setTimeout(() => {
-                this.setState({ message: null })
+                this.setState({message: null})
             })
         }
     }
-
 
 
     render() {
         return (
             <Router>
                 <div className="App">
+                    <SimpleStorage parent={this}/>
                     <Header/>
-                    {this.state.message && <Message type={this.state.message} />}
+                    {this.state.message && <Message type={this.state.message}/>}
                     <Switch>
                         <Route exact path="/"
                                render={() => <Posts posts={this.state.posts} deletePost={this.deletePost}/>}
@@ -88,36 +90,37 @@ class App extends Component {
                                    );
                                    // return <Post post={post}/>;
                                    if (post) return <Post post={post}/>;
-                                   else return <NotFound />
+                                   else return <NotFound/>
                                }}
                         />
                         <Route exact
                                path="/new"
                                render={() => (
-                                   <PostForm addNewPost={this.addNewPost}/>
-                                   post={{
-                                       id: 0,
-                                     slug: "",
-                                     title: "",
-                                   content: ""
-                               }}
+                                   <PostForm addNewPost={this.addNewPost}
+                                             post={{
+                                                 id: 0,
+                                                 slug: "",
+                                                 title: "",
+                                                 content: ""
+                                             }}
+                                   />
                                )}
                         />
                         <Route
                             path="/edit/:postSlug"
                             render={props => {
-                                const post = this.state.posts.find (
-                                post => post.slug === props.match.params.postSlug
-                            );
-                            if (post) {
-                                return <PostForm
-                                         updatePost = { this.updatePost }
-                                         post={ post } />;
-                            } else {
-                                return <redirect to="/"/>;
-                            }
+                                const post = this.state.posts.find(
+                                    post => post.slug === props.match.params.postSlug
+                                );
+                                if (post) {
+                                    return <PostForm
+                                        updatePost={this.updatePost}
+                                        post={post}/>;
+                                } else {
+                                    return <Redirect to="/"/>;
+                                }
                             }}
-                            />
+                        />
                         <Route component={NotFound}/>
                     </Switch>
 
