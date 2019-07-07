@@ -30,12 +30,11 @@ class PostForm extends Component {
     handlePostForm = e => {
         e.preventDefault();
         if(this.state.post.title) {
-            const post = {
-                title: this.state.post.title,
-                content: this.state.post.content
-            };
-            console.log(post);
-            this.props.addNewPost(this.state.post);
+            if(this.props.updatePost) {
+                this.props.updatePost(this.state.post);
+            } else {
+                this.props.addNewPost(this.state.post);
+            }
             this.setState({ saved: true });
         } else {
             alert("Title required.");
