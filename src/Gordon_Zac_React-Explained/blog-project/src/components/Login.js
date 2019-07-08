@@ -7,6 +7,10 @@ export default class Login extends Component {
     };
     handleLogin = e => {
         e.preventDeafult();
+        this.props.onLogin(
+            this.state.email,
+            this.state.password
+        );
         console.log(this.state.email, this.state.password);
     };
     render() {

@@ -8,6 +8,7 @@ import PostForm from "./components/PostForm";
 import Message from "./components/Message";
 import Login from "./components/Login";
 import SimpleStorage from "react-simple-storage";
+import firebase from "./firebase";
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,7 +20,18 @@ import {
 class App extends Component {
     state = {
         posts: [],
-        message: null
+        message: null,
+        isAuthenticated: false
+    };
+
+    onLogin = (email, password) => {
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .then(user => {
+                this.setState({isauthenticated: true});
+            })
+            .catch(error => console.error(error));
     };
 
     getNewSlugFromTitle = title =>
@@ -97,7 +109,10 @@ class App extends Component {
                         <Route
                             exact
                             path="/login"
-                            component={Login}
+                            render={() =>
+                                <Login onLogin={this.onLogin}
+                                       component={Login}/>
+                            }
                         />
                         <Route exact
                                path="/new"
