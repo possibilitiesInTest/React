@@ -6,6 +6,7 @@ import Post from "./components/Post";
 import NotFound from "./components/NotFound";
 import PostForm from "./components/PostForm";
 import Message from "./components/Message";
+import Login from "./components/Login";
 import SimpleStorage from "react-simple-storage";
 import {
     BrowserRouter as Router,
@@ -92,6 +93,11 @@ class App extends Component {
                                    if (post) return <Post post={post}/>;
                                    else return <NotFound/>
                                }}
+                        />
+                        <Route
+                            exact
+                            path="/login"
+                            component={Login}
                         />
                         <Route exact
                                path="/new"
