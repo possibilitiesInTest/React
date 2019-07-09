@@ -1,19 +1,31 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Header = props => (
+const Header = ({ onLogout, ...props}) => (
     <header className="App-header">
         <ul className="container">
             <li key="home">
                 <Link to="/"> My Site </Link>
             </li>
             {props.isAuthenticated ? (
-                <li key="new">
-                    <Link to="/new"> New Post </Link>
+                <>
+                <li>
+                    <Link to="/new">New Post</Link>
                 </li>
+                <li>
+                    <button
+                        className="linkLike"
+                        onClick={e => {
+                        e.preventDefault();
+                        onLogout();
+                        }}
+                        >Logout
+                    </button>
+                </li>
+                </>
             ) : (
-                < li key="login">
-                    < Link to="/login">Login</Link>
+                <li key="login">
+                    <Link to="/login">Login</Link>
                 </li>
             )}
         </ul>

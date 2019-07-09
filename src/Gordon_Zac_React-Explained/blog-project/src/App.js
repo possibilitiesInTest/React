@@ -34,6 +34,16 @@ class App extends Component {
             .catch(error => console.error(error));
     };
 
+    onLogout = () => {
+        firebase
+            .auth()
+            .signOut()
+            .then(() => {
+                this.setState({ isAuthenticated: false });
+            })
+            .catch(error => console.error(error));
+    };
+
     getNewSlugFromTitle = title =>
         encodeURIComponent(
             title
@@ -91,7 +101,9 @@ class App extends Component {
                 <div className="App">
                     <SimpleStorage parent={this}/>
                     <Header
-                        isAuthenticated={this.state.isAuthenticated}/>
+                        isAuthenticated={this.state.isAuthenticated}
+                        onLogout={this.onLogout}
+                    />
                     {this.state.message && (<Message type={this.state.message}/>)}
                     <Switch>
                         <Route exact path="/"
@@ -144,7 +156,7 @@ class App extends Component {
                                 const post = this.state.posts.find(
                                     post => post.slug === props.match.params.postSlug
                                 );
-                                if (post && thist.state.isAuthenticated) {
+                                if (post && this.state.isAuthenticated) {
                                     return <PostForm
                                         updatePost={this.updatePost}
                                         post={post}/>;
