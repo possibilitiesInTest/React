@@ -1,13 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Header = ({ onLogout, ...props}) => (
+const Header = ({ onLogout, isAuthenticated}) => (
     <header className="App-header">
         <ul className="container">
             <li key="home">
                 <Link to="/"> My Site </Link>
             </li>
-            {props.isAuthenticated ? (
+            {isAuthenticated ? (
                 <>
                 <li>
                     <Link to="/new">New Post</Link>
