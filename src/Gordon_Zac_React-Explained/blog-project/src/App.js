@@ -90,11 +90,14 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <SimpleStorage parent={this}/>
-                    <Header/>
-                    {this.state.message && <Message type={this.state.message}/>}
+                    <Header
+                        isAuthenticated={this.state.isAuthenticated}/>
+                    {this.state.message && (<Message type={this.state.message}/>)}
                     <Switch>
                         <Route exact path="/"
-                               render={() => <Posts posts={this.state.posts} deletePost={this.deletePost}/>}
+                               render={() => <Posts isAuthenticated={this.state.isAuthenticated}
+                                                    posts={this.state.posts}
+                                                    deletePost={this.deletePost}/>}
                         />
                         <Route path="/post/:postSlug"
                                render={props => {
@@ -110,22 +113,30 @@ class App extends Component {
                             exact
                             path="/login"
                             render={() =>
-                                <Login onLogin={this.onLogin}
-                                       component={Login}/>
+                                !this.state.isAuthenticated ? (
+                                    <Login onLogin={this.onLogin}
+                                           component={Login}/>
+                                ) : (
+                                    <Redirect to="/"/>
+                                )
                             }
                         />
                         <Route exact
-                               path="/new"
-                               render={() => (
-                                   <PostForm addNewPost={this.addNewPost}
-                                             post={{
-                                                 id: 0,
-                                                 slug: "",
-                                                 title: "",
-                                                 content: ""
-                                             }}
-                                   />
-                               )}
+                                path="/new"
+                                render={() =>
+                                    this.state.isAuthenticated ? (
+                                    <PostForm addNewPost={this.addNewPost}
+                                              post={{
+                                                  id: 0,
+                                                  slug: "",
+                                                  title: "",
+                                                  content: ""
+                                              }}
+                                    />
+                                    ) : (
+                                        <redirect to="/login" />
+                                    )
+                                }
                         />
                         <Route
                             path="/edit/:postSlug"
@@ -133,12 +144,14 @@ class App extends Component {
                                 const post = this.state.posts.find(
                                     post => post.slug === props.match.params.postSlug
                                 );
-                                if (post) {
+                                if (post && thist.state.isAuthenticated) {
                                     return <PostForm
                                         updatePost={this.updatePost}
                                         post={post}/>;
+                                } else if (post && !this.state.isAuthenticated) {
+                                    return <Redirect to="/login"/>;
                                 } else {
-                                    return <Redirect to="/"/>;
+                                    return <Redirect to="/" />;
                                 }
                             }}
                         />
