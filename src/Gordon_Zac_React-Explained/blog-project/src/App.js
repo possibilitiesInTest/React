@@ -90,6 +90,23 @@ class App extends Component {
     }
   };
 
+  componentDidMount() {
+    const postsRef = firebase.database().ref("posts");
+    postsRef.on("value", snapshot => {
+      const posts = snapshot.val();
+      const newStatePosts = [];
+      for (let post in posts) {
+        newStatePosts.push({
+          key: post,
+          slug: posts[post].slug,
+          title: posts[post].title,
+          content: posts[posts].content
+        });
+      }
+      this.setState({ posts: newStatePosts });
+    });
+  }
+
   render() {
     return (
       <Router>
