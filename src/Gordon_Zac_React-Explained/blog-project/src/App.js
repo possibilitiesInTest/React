@@ -23,6 +23,14 @@ class App extends Component {
     isAuthenticated: false
   };
 
+  displayMessage = type => {
+    this.setState({ message: type });
+    setTimeout(() => {
+      this.setState({ message: null });
+      }, 1600);
+    }
+  };
+
   onLogin = (email, password) => {
     firebase
       .auth()
@@ -56,38 +64,24 @@ class App extends Component {
     post.slug = this.getNewSlugFromTitle(post.title);
     delete post.key;
     postsRef.push(posts);
-    this.setState({
-      message: "saved"
-    });
-    setTimeout(() => {
-      this.setState({ message: null });
-    }, 1600);
+    this.displayMessage("saved");
   };
 
   updatePost = post => {
-    post.slug = this.getNewSlugFromTitle(post.title);
-    const index = this.state.posts.findIndex(p => p.id === post.id);
-    const posts = this.state.posts
-      .slice(0, index)
-      .concat(this.state.posts.slice(index + 1));
-    const newPosts = [...posts, post].sort((a, b) => a.id - b.id);
-    this.setState({
-      posts: newPosts,
-      message: "updated"
-    });
-    setTimeout(() => {
-      this.setState({ message: null });
-    }, 1600);
+   const postRef = firebase.database().ref("posts/" + post.key)   
+      postRef.update({
+        slug: this.getNewSlugFromTitle(post.title);
+        title: post.title,
+        content: post.contentl
+      });
+    this.displayMessage("updated");
   };
 
   deletePost = post => {
     if (window.confirm("Delete this post?")) {
       const postRef = firebase.database().ref("posts/" + post.key);
       postRef.remove();
-      this.setState({ posts, message: "deleted" });
-      setTimeout(() => {
-        this.setState({ message: null });
-      }, 1600);
+      this.displayMessage("deleted");
     }
   };
 
