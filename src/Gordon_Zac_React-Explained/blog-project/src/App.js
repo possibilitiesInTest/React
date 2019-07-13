@@ -8,7 +8,6 @@ import PostForm from "./components/PostForm";
 import Message from "./components/Message";
 import Login from "./components/Login";
 import SimpleStorage from "react-simple-storage";
-import firebase from "./firebase";
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,22 +27,20 @@ class App extends Component {
     setTimeout(() => {
       this.setState({ message: null });
       }, 1600);
-    }
-  };
+    };
 
   onLogin = (email, password) => {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
+      console.log(email, password);
+      this.props.appService
+      .login(email, password)
       .then(user => {
-        this.setState({ isauthenticated: true });
+        this.setState({ isAuthenticated: true });
       })
       .catch(error => console.error(error));
   };
 
   onLogout = () => {
-    firebase
-      .auth()
+    this.props.appService
       .signOut()
       .then(() => {
         this.setState({ isAuthenticated: false });
@@ -51,56 +48,30 @@ class App extends Component {
       .catch(error => console.error(error));
   };
 
-  getNewSlugFromTitle = title =>
-    encodeURIComponent(
-      title
-        .toLowerCase()
-        .split(" ")
-        .join("-")
-    );
-
-  addNewPost = ({ post, posts }) => {
-    const postsRef = firebase.database().ref("posts");
-    post.slug = this.getNewSlugFromTitle(post.title);
-    delete post.key;
-    postsRef.push(posts);
+  addNewPost = post => {
+    this.props.appService.savePost(post);
     this.displayMessage("saved");
   };
 
   updatePost = post => {
-   const postRef = firebase.database().ref("posts/" + post.key)   
-      postRef.update({
-        slug: this.getNewSlugFromTitle(post.title);
-        title: post.title,
-        content: post.contentl
-      });
+    this.props.appService.updatePost(post);
     this.displayMessage("updated");
   };
 
   deletePost = post => {
     if (window.confirm("Delete this post?")) {
-      const postRef = firebase.database().ref("posts/" + post.key);
-      postRef.remove();
+      this.props.appService.deletePost(post);
       this.displayMessage("deleted");
     }
   };
 
   componentDidMount() {
-    const postsRef = firebase.database().ref("posts");
-    postsRef.on("value", snapshot => {
-      const posts = snapshot.val();
-      const newStatePosts = [];
-      for (let post in posts) {
-        newStatePosts.push({
-          key: post,
-          slug: posts[post].slug,
-          title: posts[post].title,
-          content: posts[posts].content
-        });
+      this.props.appService
+        .subscribeToPosts(posts => this.setState({
+          posts
+        }));
       }
-      this.setState({ posts: newStatePosts });
-    });
-  }
+  
 
   render() {
     return (
