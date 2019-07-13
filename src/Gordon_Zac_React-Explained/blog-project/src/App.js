@@ -22,6 +22,12 @@ class App extends Component {
     isAuthenticated: false
   };
 
+  renderAuthRoute =(Component, props) => (
+      this.state.isAuthenticated ? (
+          <Component {...props} />
+      ) : <Redirect to ="/" />
+  )
+
   displayMessage = type => {
     this.setState({ message: type });
     setTimeout(() => {
@@ -110,45 +116,41 @@ class App extends Component {
               exact
               path="/login"
               render={() =>
-                !this.state.isAuthenticated ? (
-                  <Login onLogin={this.onLogin} component={Login} />
-                ) : (
-                  <Redirect to="/" />
-                )
+                this.renderAuthRoute(Login, {
+                    onLogin: this.onLogin
+                    })
               }
             />
+
             <Route
               exact
               path="/new"
               render={() =>
-                this.state.isAuthenticated ? (
-                  <PostForm
-                    addNewPost={this.addNewPost}
-                    post={{
-                      key: null,
-                      id: 0,
-                      slug: "",
-                      title: "",
-                      content: ""
-                    }}
-                  />
-                ) : (
-                  <redirect to="/login" />
-                )
+                  this.renderAuthRoute(PostForm, {
+                      addNewPost: this.addNewPost,
+                      post: {
+                          key: null,
+                          id: 0,
+                          slug: "",
+                          title: "",
+                          content: ""
+                      }
+                  })
               }
             />
+
             <Route
               path="/edit/:postSlug"
               render={props => {
                 const post = this.state.posts.find(
                   post => post.slug === props.match.params.postSlug
                 );
-                if (post && this.state.isAuthenticated) {
-                  return <PostForm updatePost={this.updatePost} post={post} />;
-                } else if (post && !this.state.isAuthenticated) {
-                  return <Redirect to="/login" />;
+                if (post) {
+                    return this.renderAuthRoute(PostForm, {
+                        updatePost: this.updatePost, post
+                    });
                 } else {
-                  return <Redirect to="/" />;
+                    return <Redirect to="/" />
                 }
               }}
             />
