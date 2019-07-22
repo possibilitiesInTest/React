@@ -4,7 +4,7 @@ import SeasonDisplay from './SeasonDisplay';
 
 class App extends React.Component {
     state = { lat: null, errMessage: ''};   
-    }
+    
 
     componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
@@ -24,8 +24,6 @@ class App extends React.Component {
 
             return <div>Loading!</div>;
         }
-    }
+    }    
 
-ReactDOM.render(
-    (<App />, document.querySelector('#root'))
-)
+ReactDOM.render(<App />, document.querySelector('#root'));
