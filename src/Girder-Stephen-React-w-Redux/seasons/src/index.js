@@ -15,16 +15,24 @@ class App extends React.Component {
         );
     }
  
+    renderContent() {
+        if( this.state.errorMessage && !this.state.lat) {
+            return <div>Error: {this.state.errorMessage }</div>;
+        }
+
+        if (!this.state.errorMessage && this.state.lat ) {
+            return <SeasonDisplay lat={this.state.lat}/>;
+        }
+
+        return <Spinner message="Please allow location access!" />;
+    }
+
     render() {
-            if( this.state.errorMessage && !this.state.lat) {
-                return <div>Error: {this.state.errorMessage }</div>;
-            }
-
-            if (!this.state.errorMessage && this.state.lat ) {
-                return <SeasonDisplay lat={this.state.lat}/>;
-            }
-
-            return <Spinner message="Please allow location access!" />;
+        return (
+            <div className="border 5px red">
+                {this.renderContent()}
+            </div>
+        )
         }
     }    
 
