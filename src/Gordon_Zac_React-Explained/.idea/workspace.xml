@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82029605-e53a-4c2e-850c-824c463df57e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog-project/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-project/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-project/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book" beforeDir="false" afterPath="$PROJECT_DIR$/react-book" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/1-javascript/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/1-javascript/completed/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/1-javascript/starter/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-2/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-2/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-2/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/completed/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/completed/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/completed/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/completed/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/starter/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/starter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-3/starter/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/completed/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/completed/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/completed/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/completed/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/completed/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/starter/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/starter/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/starter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-4/starter/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/completed/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/completed/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/completed/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/completed/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/completed/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/starter/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/starter/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/starter/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/starter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/2-dev-tools/practice-5/starter/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/completed/babel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/completed/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/completed/react-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/completed/react.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/starter/babel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/starter/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/starter/react-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/4-elements-and-components/starter/react.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/completed/babel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/completed/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/completed/react-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/completed/react.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/starter/babel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/starter/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/starter/react-dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/5-jsx/starter/react.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/6-create-react-app/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/Practice1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/Practice2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/Practice3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/Practice4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/Practice5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/completed/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/Practice1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/Practice2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/Practice3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/Practice4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/Practice5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/7-props/starter/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/Practice1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/Practice2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/Practice3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/Practice4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/Practice5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/completed/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/Practice1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/Practice2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/Practice3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/Practice4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/Practice5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/8-state/starter/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/completed/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/Practice1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/Practice2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/Practice3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/Practice4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/Practice5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/9-component-lifecycle/starter/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-book/project/step-01-listing/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-book/project/step-01-listing/package.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog-project/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Working-With-Props/src/Practice1.js" />
+        <option value="$PROJECT_DIR$/Working-With-Props/src/Practice2.js" />
+        <option value="$PROJECT_DIR$/Working-With-Props/src/Practice3.js" />
+        <option value="$PROJECT_DIR$/Working-With-Props/src/Practice4.js" />
+        <option value="$PROJECT_DIR$/Working-With-Props/src/index.js" />
+        <option value="$PROJECT_DIR$/Working-With-Props/src/Practice5.js" />
+        <option value="$PROJECT_DIR$/react-book/8-state/starter/src/Practice1.js" />
+        <option value="$PROJECT_DIR$/Working-With-State/src/Practice2.js" />
+        <option value="$PROJECT_DIR$/Working-With-State/src/Practice3.js" />
+        <option value="$PROJECT_DIR$/Working-With-State/src/Practice4.js" />
+        <option value="$PROJECT_DIR$/Working-With-State/src/index.js" />
+        <option value="$PROJECT_DIR$/Working-With-State/src/Practice5.js" />
+        <option value="$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice1.js" />
+        <option value="$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice2.js" />
+        <option value="$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice3.js" />
+        <option value="$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice4.js" />
+        <option value="$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/index.js" />
+        <option value="$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice5.js" />
+        <option value="$PROJECT_DIR$/blog-project/src/components/Posts.js" />
+        <option value="$PROJECT_DIR$/blog-project/src/components/Header.js" />
+        <option value="$PROJECT_DIR$/blog-project/src/App.css" />
+        <option value="$PROJECT_DIR$/blog-project/src/App.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="238" />
+    <option name="y" value="129" />
+    <option name="width" value="813" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Gordon_Zac_React-Explained" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gordon_Zac_React-Explained" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gordon_Zac_React-Explained" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gordon_Zac_React-Explained" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gordon_Zac_React-Explained" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gordon_Zac_React-Explained" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gordon_Zac_React-Explained" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gordon_Zac_React-Explained" type="462c0819:PsiDirectoryNode" />
+              <item name="blog-project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BaseCamp\Documents\git\React\src\Gordon_Zac_React-Explained\Working-With-Lifecycle-Hooks" />
+      <recent name="C:\Users\BaseCamp\Documents\git\React\src\Gordon_Zac_React-Explained\Working-With-State" />
+      <recent name="C:\Users\BaseCamp\Documents\git\React\src\Gordon_Zac_React-Explained\Working-With-Props" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82029605-e53a-4c2e-850c-824c463df57e" name="Default Changelist" comment="" />
+      <created>1561636446426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561636446426</updated>
+      <workItem from="1561636453177" duration="7975000" />
+      <workItem from="1561864416966" duration="451000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="30943000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="238" y="129" width="813" height="754" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28419656" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" weight="0.3292683" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Learn" order="0" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24878049" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Writing-Create-App-Examples/exercise-4/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/7-props/README.md" />
+    <entry file="file://$PROJECT_DIR$/react-book/7-props/completed/src/Practice5.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/7-props/completed/src/Practice3.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/7-props/completed/src/Practice2.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/7-props/completed/src/Practice1.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/8-state/completed/src/Practice1.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/8-state/README.md" />
+    <entry file="file://$PROJECT_DIR$/react-book/8-state/completed/src/Practice2.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/8-state/completed/src/Practice3.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-State/src/Practice2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-State/src/Practice3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-State/src/Practice1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/8-state/completed/src/Practice4.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-State/src/Practice4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-State/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#223#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Writing-Create-App-Examples/exercise-2/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Writing-Create-App-Examples/exercise-3/src/Hello.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Writing-Create-App-Examples/exercise-3/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Writing-Create-App-Examples/exercise-4/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#223#259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/Practice1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/Practice2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/Practice3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/Practice4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Working-With-Props/src/Practice5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice1.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/4-elements-and-components/completed/index.html" />
+    <entry file="file://$PROJECT_DIR$/react-book/5-jsx/completed/index.html" />
+    <entry file="file://$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice1.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice3.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice2.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice4.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice4.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/index.js" />
+    <entry file="file://$PROJECT_DIR$/react-book/9-component-lifecycle/completed/src/Practice5.js" />
+    <entry file="file://$PROJECT_DIR$/Working-With-Lifecycle-Hooks/src/Practice5.js" />
+    <entry file="file://$PROJECT_DIR$/Writing-JSX/index.html" />
+    <entry file="file://$PROJECT_DIR$/Working-With-State/src/Practice5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-project/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/project/step-01-listing/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/project/step-01-listing/src/components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/project/step-01-listing/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-book/project/step-01-listing/src/components/Posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-project/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-project/src/components/Posts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog-project/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
