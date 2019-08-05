@@ -22,16 +22,16 @@ const deletePolicy = (name) => {
 
 const createClaim = (name, amountOfMoneyToCollect) => {
   return {
-    type: 'CREAT_CLAIM',
+    type: 'CREATE_CLAIM',
     payload: {
   name: name,
-  amountOfMonryToCollection: amountOfMoneyToCollect
+  amountOfMoneyToCollect: amountOfMoneyToCollect
     }
   };
  };
  
  // Reducers (Departments!)
- const claimsHistory = (oldListOfLcaims, action) => {
+ const claimsHistory = (oldListOfClaims = [], action) => {
    if (action.type === 'CREATE_CLAIM') {
     // we care about this action (FORM!)
     return [...oldListOfClaims, action.payload];
@@ -42,20 +42,21 @@ const createClaim = (name, amountOfMoneyToCollect) => {
  };
  
  // Reducers (Accounting)
- const accounting = (bagOfMoney = , action) => {
+ const accounting = (bagOfMoney = 100, action) => {
   if (action.type === 'CREATE_CLAIM') {
     return bagOfMoney - action.payload.amountOfMoneyToCollect;
   } else if (action.type === 'CREATE_POLICY') {
     return bagOfMoney + action.payload.amount;
   }
   
-  return bagOfmOney;
+  return bagOfMoney;
  }
  
   // Reducers (Policies!)
  const policies = (listOfPolicies = [], action) => {
-  if(action.type='CREATE_POLICY') {
-    return [...listOfPolicies, action,poyload.name]; } else if (action.type === 'DELETE_POLICY') {
+  if(action.type === 'CREATE_POLICY') {
+    return [...listOfPolicies, action.payload.name]; 
+  } else if (action.type === 'DELETE_POLICY') {
     return listOfPolicies.filter(name => name !== action.payload.name);
     }
    return listOfPolicies;
@@ -72,17 +73,13 @@ const ourDepartments = combineReducers ({
  
 const store = createStore(ourDepartments);
 
-
-
 store.dispatch(createPolicy('Bob', 10));
 store.dispatch(createPolicy('Jim', 15));
 store.dispatch(createPolicy('Sally', 20));
 store.dispatch(createPolicy('Sue', 40));
 
-;
 store.dispatch(createClaim('Sue', 25));
 store.dispatch(createClaim('Soma', 100));
 
-
-
+store.dispatch(deletePolicy('Bob'));
 console.log(store.getState());
