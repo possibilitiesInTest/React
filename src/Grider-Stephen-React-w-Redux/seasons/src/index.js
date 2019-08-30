@@ -1,39 +1,49 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import SeasonDisplay from './SeasonDisplay';
-import Spinner from './Spinner';
+import React from "react";
+import ReactDOM from "react-dom";
+import SeasonDisplay from "./SeasonDisplay";
+import Spinner from "./Spinner";
+import useLocation from "./useLocation";
 
+const App = () => {
+  const [lat, errorMessage] = useLocation();
 
-class App extends React.Component {
-    state = { lat: null, errMessage: ''};   
-    
+  let content;
+  if (errorMessage) {
+    content = <div>Error: {errorMessage}</div>;
+  } else if (lat) {
+    content = <SeasonDisplay lat={lat} />;
+  } else {
+    content = <Spinner message="Please accept location request" />;
+  }
 
-    componentDidMount() {
-        window.navigator.geolocation.getCurrentPosition(
-            position => this.setState({ lat: position.coords.latitude }),
-            err => this.setState({ errorMessage: err.message }) 
-        );
-    }
- 
-    renderContent() {
-        if( this.state.errorMessage && !this.state.lat) {
-            return <div>Error: {this.state.errorMessage }</div>;
-        }
+  return <div className="border red">{content}</div>;
+};
 
-        if (!this.state.errorMessage && this.state.lat ) {
-            return <SeasonDisplay lat={this.state.lat}/>;
-        }
+// class App extends React.Component {
+//   state = { lat: null, errMessage: "" };
 
-        return <Spinner message="Please allow location access!" />;
-    }
+//   componentDidMount() {
+//     window.navigator.geolocation.getCurrentPosition(
+//       position => this.setState({ lat: position.coords.latitude }),
+//       err => this.setState({ errorMessage: err.message })
+//     );
+//   }
 
-    render() {
-        return (
-            <div className="border 5px red">
-                {this.renderContent()}
-            </div>
-        )
-        }
-    }    
+//   renderContent() {
+//     if (this.state.errorMessage && !this.state.lat) {
+//       return <div>Error: {this.state.errorMessage}</div>;
+//     }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+//     if (!this.state.errorMessage && this.state.lat) {
+//       return <SeasonDisplay lat={this.state.lat} />;
+//     }
+
+//     return <Spinner message="Please allow location access!" />;
+//   }
+
+//   render() {
+//     return <div className="border 5px red">{this.renderContent()}</div>;
+//   }
+// }
+
+ReactDOM.render(<App />, document.querySelector("#root"));
