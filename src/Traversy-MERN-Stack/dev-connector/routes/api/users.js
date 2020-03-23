@@ -15,7 +15,7 @@ const { check, validationResult } = require("express-validator");
 router.post(
   "/",
   [
-    check("name", " Name is requried")
+    check("name", "Name is requried")
       .not()
       .isEmpty(),
     check("email", "Please include a valid email").isEmail(),
