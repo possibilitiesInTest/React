@@ -60,17 +60,25 @@ router.post(
       });
 
       // Encrypt Password
+        // create salt to hash pw w. rounds
+        const salt = await bcrypt.genSalt(10);
 
+        // hash user pw w. bcrypt salt
+        user.password = await bcrypt.hash(password, salt);
+
+      // Save user to db
+      await user.save();
 
       // Return jsonwebtoken
 
+
+
+      res.send("User registered ...");
       } catch(err) {
         console.error(err.message);
         res.status(500).send('Server error');
       }
-
-
-      res.send("User registered ...");
+    
     }
   );
 
