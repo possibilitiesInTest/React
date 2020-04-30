@@ -1,12 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const gravatar = require('gravatar');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+const auth = require("../../middleware/auth");
+const User = require("../../models/User");
+const jwt = require("jsonwebtoken");
+const config = require("config");
+const bcrypt = require("bcryptjs");
+const gravatar = require("gravatar");
+const { check, validationResult } = require("express-validator");
 
-const { check, validationResult } = require('express-validator');
-
-const User = require('../../models/User');
 
 // #route GET api/users
 // @desc  Test route
@@ -47,7 +48,7 @@ router.post(
         return res
           .status(400)
           .json({ errors: [{ msg: "User already exists" }] });
-      }
+      };
 
       //else if user not found in db
       // set default gravatar
@@ -83,7 +84,7 @@ router.post(
         user: {
           id: user.id
         }
-      }
+      };
 
       // sign the payload being sent
       // w. the secret token
