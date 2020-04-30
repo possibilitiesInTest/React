@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+
 const { check, validationResult } = require('express-validator');
 
 const User = require('../../models/User');
@@ -38,20 +40,25 @@ router.post(
       
       try {
       // See if user exists
-      let user = await User.findone({ email });
+      let user = await User.findOne({ email });
 
-      if(user) {
-        res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+      // if user has a value, then return exists
+      if (user) {
+        return res
+          .status(400)
+          .json({ errors: [{ msg: "User already exists" }] });
       }
 
-      // Get users gravatar
+      //else if user not found in db
+      // set default gravatar
       const avatar = gravatar.url(email, {
         s: '200',
         r: 'pg',
         d: 'mm'
       });
 
-      // Create New User Instance
+      // create user instance from User model
+      // with default values for:
       user = new User({
         name,
         email,
@@ -71,15 +78,31 @@ router.post(
 
       // Return jsonwebtoken
 
-
-
-      res.send("User registered ...");
-      } catch(err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
+      // set payload to user.id passed by mongoose
+      const payload = {
+        user: {
+          id: user.id
+        }
       }
-    
+
+      // sign the payload being sent
+      // w. the secret token
+      jwt.sign(
+        payload,
+        config.get("jwtSecret"),
+        { expiresIn: 3600 },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
+
+      // res.send("User registered ...");
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server error");
     }
-  );
+  }
+);
 
 module.exports = router;
