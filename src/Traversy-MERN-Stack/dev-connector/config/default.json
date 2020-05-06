@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://brad123:pass123@devconnector-rqsgu.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "secretPassPhrase"
+    "jwtSecret": "secretPassPhrase",
+    "githubClientId": "34865e174e0b25803c0a",
+    "githubSecret": "49d9fd85b5bfd853ceb79be194ace69cfbc86f16"
 }

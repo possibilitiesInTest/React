@@ -14,7 +14,6 @@ const { check, validationResult } = require("express-validator");
 // @access Public
 
 // router.get('/', (req, res) => res.send('Users route'));
-
 router.post(
     "/",
     [

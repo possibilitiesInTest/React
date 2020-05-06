@@ -166,6 +166,7 @@ router.delete("/", auth, async (req, res) => {
 // @route    PUT api/profile/experience
 // @desc     Add profile experience
 // @access   Private
+
 router.put(
     '/experience',
     [
@@ -247,6 +248,7 @@ router.delete('/experience/:exp_id', auth, async (req, res) => {
   // @route    PUT api/profile/education
   // @desc     Add profile education
   // @access   Private
+
   router.put(
     '/education',
     [
@@ -329,6 +331,7 @@ router.delete('/experience/:exp_id', auth, async (req, res) => {
   // @route    GET api/profile/github/:username
   // @desc     Get user repos from Github
   // @access   Public
+
   router.get('/github/:username', async (req, res) => {
     try {
       const uri = encodeURI(
