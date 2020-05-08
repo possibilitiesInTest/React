@@ -24,7 +24,7 @@ const PostSchema = new Schema({
             },
             text: {
                 type: String,
-                required: true
+                required: false
             },
             name: {
                 type: String
