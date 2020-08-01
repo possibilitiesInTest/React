@@ -2,12 +2,15 @@ import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { getCurrentProfile } from "../../actions/profile";
 import Spinner from "../layout/Spinner";
-import { getCurrentProfile } from "../../actions/profile";
+import DashboardActions from "./DashboardActions";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Dashboard = ({
+  user,
   getCurrentProfile,
-  auth,
-  profile: { profile, loading },
+  auth: { isAuthenticated, loading },
+  profile: { profile },
 }) => {
   useEffect(() => {
     getCurrentProfile();
@@ -22,7 +25,9 @@ const Dashboard = ({
         <i className="fas fa-user"></i>Welcoem {user && user.name}
       </p>
       {profile !== null ? (
-        <Fragment>has</Fragment>
+        <Fragment>
+          <DashboardActions />
+        </Fragment>
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
@@ -44,6 +49,7 @@ Dashboard.propTypes = {
 const mapStateToProps = (state) => ({
   auth: state.auth,
   profile: state.profile,
+  getCurrentProfile: state.profile,
 });
 
 export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);
