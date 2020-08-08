@@ -1,6 +1,8 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 import {
+  GET_PROFILE,
+  GET_PROFILES,
   REGISTER_SUCCESS,
   REGISTER_FAIL,
   USER_LOADED,
