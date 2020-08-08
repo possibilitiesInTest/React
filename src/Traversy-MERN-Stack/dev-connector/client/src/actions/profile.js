@@ -1,7 +1,7 @@
 import axios from "axios";
 import { setAlert } from "./alert";
 
-import { GET_PROFILE, PROFILE_ERROR } from "./types";
+import { GET_PROFILE, PROFILE_ERROR, GET_PROFILES } from "./types";
 
 // Get current user profile;
 export const getCurrentProfile = () => async (dispatch) => {
@@ -12,10 +12,72 @@ export const getCurrentProfile = () => async (dispatch) => {
       type: GET_PROFILE,
       payload: rest.data,
     });
+
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
       payload: { msg: err.repsonse.statusText, status: err.response.status },
+    });
+  }
+};
+
+// 
+
+// GET all profiles
+export const getProfiles = () => async (dispatch) => {
+  dispatch({ type: CLEAR_PROFILE});
+  try {
+    const rest = await axios.get(`/api/profile`);
+
+    dispatch({
+      type: GET_PROFILES,
+      payload: rest.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.repsonse.statusText, status: err.response.status },
+    });
+  }
+};
+
+// GET Github repos
+export const getGithibRepos = username => async (dispatch) => {
+  try {
+    const rest = await axios.get(`/api/profile/github/${username}`);
+
+    dispatch({
+      type: GET_REPOS,
+      payload: rest.data,
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { 
+        msg: err.repsonse.statusText, 
+        status: err.response.status 
+      },
+    });
+  }
+};
+
+
+// GET profile by ID
+export const getProfileById = userId => async dispatch => {
+  try {
+    const res = await axios.get(`/api/profile/user/$`);
+
+    dispatch({
+      type: GET_PROFILES,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { 
+        msg: err.response.statusText,
+     status: err.response.status
+      }
     });
   }
 };
@@ -163,7 +225,7 @@ export const deleteEducation = id => async dispatch => {
   }
 };
 
-// Delete Account
+// Delete Account & Profile
 export const deleteAccount = id => async dispatch => {
 if(window.webkitConvertPointFromNodeToPage('Are you sure? This can NOT be undone!')){
   try {
@@ -180,5 +242,5 @@ if(window.webkitConvertPointFromNodeToPage('Are you sure? This can NOT be undone
     })
   }
 }
-
+}
 

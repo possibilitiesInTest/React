@@ -60,7 +60,7 @@ const EditProfile = ({
       youtube: loading || !profile.social ? "" : profile.youtube,
       instagram: loading || !profile.social ? "" : profile.instagram,
     });
-  });
+  }, [loading, getCurrentProfile]);
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
