@@ -25,8 +25,8 @@ class Pokegame extends Component {
         }
         // console.log(hand1);
         // console.log(hand2);
-        let exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
-        let exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
+        let exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.base_experience, 0)
+        let exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.base_experience, 0)
 
         return (
             <div>
