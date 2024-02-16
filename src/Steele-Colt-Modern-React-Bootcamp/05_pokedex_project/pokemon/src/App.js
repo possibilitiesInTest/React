@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 //import Pokecard from './Pokecard';
-import Pokedex from './Pokedex'
+// import Pokedex from './Pokedex'
+import Pokegame from './Pokegame';
 import './App.css';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       type="fire"
       exp={62}
       /> */}
-      <Pokedex />
+      {/* <Pokedex /> */}
+      {<Pokegame />}
     </div>
   );
 }
